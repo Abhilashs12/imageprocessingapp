@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Processing Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Upload and Process Your Image</h2>
+
+  <input type="file" id="imageUpload" accept="image/*">
+
+  <label>
+    <input type="checkbox" id="grayscaleCheckbox">
+    Convert to Grayscale First
+  </label>
+
+  <label for="kernelSize">Neighborhood Size:</label>
+  <select id="kernelSize">
+    <option value="3">3x3</option>
+    <option value="5">5x5</option>
+  </select>
+
+  <button id="smoothBtn">Smooth Image</button>
+
+  <h3>Original Image</h3>
+  <canvas id="originalCanvas"></canvas>
+  <div id="pixelInfo"></div>
+
+  <h3>Smoothed Image</h3>
+  <canvas id="smoothedCanvas"></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>
